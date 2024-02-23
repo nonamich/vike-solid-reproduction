@@ -16,8 +16,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       >
         <Sidebar>
           <Logo />
-          <Link href="/">Index</Link>
-          <Link href="/page1">Page 1</Link>
+          <Link href="/">Page 1</Link>
           <Link href="/page2">Page 2</Link>
           <Link href="/page-with-provider">Page with Provider</Link>
           <Link href="/page-with-provider-2">Page 2 with Provider</Link>
