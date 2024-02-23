@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "tsc --noEmit"
+  },
+  "dependencies": {
+    "solid-js": "^1.8.15",
+    "vike": "^0.4.163",
+    "vike-solid": "^0.4.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4"
+  },
+  "type": "module"
+}
