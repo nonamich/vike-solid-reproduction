@@ -2,23 +2,29 @@ import "./style.css";
 import logoUrl from "../assets/logo.svg";
 import { Link } from "../components/Link";
 import type { JSX } from "solid-js";
+import { RandomProvider } from "../contexts/Random";
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        "max-width": "900px",
-        margin: "auto",
-      }}
-    >
-      <Sidebar>
-        <Logo />
-        <Link href="/">SSR</Link>
-        <Link href="/spa">SPA</Link>
-      </Sidebar>
-      <Content>{props.children}</Content>
-    </div>
+    <RandomProvider>
+      <div
+        style={{
+          display: "flex",
+          "max-width": "900px",
+          margin: "auto",
+        }}
+      >
+        <Sidebar>
+          <Logo />
+          <Link href="/">Index</Link>
+          <Link href="/page1">Page 1</Link>
+          <Link href="/page2">Page 2</Link>
+          <Link href="/page-with-provider">Page with Provider</Link>
+          <Link href="/page-with-provider-2">Page 2 with Provider</Link>
+        </Sidebar>
+        <Content>{props.children}</Content>
+      </div>
+    </RandomProvider>
   );
 }
 

@@ -11,4 +11,5 @@ export default {
   title: "My Vike Solid App",
   ssr: true, // can be removed since `true` is the default
   extends: vikeSolid,
+  passToClient: ['random']
 } satisfies Config;
